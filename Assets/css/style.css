@@ -1,0 +1,205 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    /* background-color: aqua; */
+}
+
+.hero{
+    height:100vh;
+    width:100%;
+    background-image: url('../images/sky.jpg');
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    overflow-x: hidden;
+}
+
+.highway{
+    height:200px;
+    width:500%;
+    /* display:block; */
+    background-image: url('../images/road.jpg');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    animation: highway 5s linear infinite;
+}
+
+@keyframes highway{
+    100%{
+        transform:translateX(-100vw)
+    }
+}
+
+.city{
+    height:250px;
+    width:500%;
+    background-image: url('../images/city.png');
+    display:block;
+    position:absolute;
+    bottom:200px;
+    left:0;
+    right:0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+
+@keyframes city {
+    100%{
+        transform: translateX(-50vw);
+    }
+}
+
+.car{
+    width:400px;
+    position:absolute;
+    left:50%;
+    bottom:100px;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.car img{
+    width:100%;
+    animation:car 1s linear infinite;
+}
+
+@keyframes car {
+    100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    0%{
+        transform: translateY(-2px);
+    }
+}
+
+.wheel{
+    position:absolute;
+    left:50%;
+    bottom:178px;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.wheel img{
+    width:72px;
+    height:72px;
+    animation:wheel-rotate 1s linear infinite;
+}
+
+.back-wheel{
+    position:absolute;
+    left:-164px;
+}
+
+.front-wheel{
+    position:absolute;
+    left: 80px;
+}
+
+@keyframes wheel-rotate{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.bird img{
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:20%;
+    top:0;
+    animation:bird 1s linear infinite;
+    
+}
+
+@keyframes bird {
+    100%{
+        transform:translateY(2px);
+    }
+    50%{
+        transform:translateY(-2px);
+    }
+    0%{
+        transform:translateY(2px);
+    }
+}
+
+.tree{
+    position: absolute;
+    left:100px;
+    top: 510px;
+}
+
+.tree img{
+    width:20%;
+    height:20%;
+   animation:tree-move 10s linear infinite
+}
+
+.tree-1{
+    position: absolute;
+    left:400px;
+    top: 510px;
+}
+
+.tree-1 img{
+    width:25%;
+    height:25%;
+    animation:tree-move 10s linear infinite
+}
+
+.tree-2{
+    position: absolute;
+    left:800px;
+    top: 510px;
+}
+
+.tree-2 img{
+    width:30%;
+    height:30%;
+    animation:tree-move 10s linear infinite
+    
+}
+
+.tree-3{
+    position: absolute;
+    left:1200px;
+    top: 510px;
+}
+
+.tree-3 img{
+    width:30%;
+    height:30%;
+    animation:tree-move 10s linear infinite
+     
+}
+
+.tree-4{
+    position: absolute;
+    left:1600px;
+    top: 510px;
+}
+
+.tree-4 img{
+    width:55%;
+    height:55%;
+    animation:tree-move 10s linear infinite
+     
+}
+
+@keyframes tree-move{
+    100%{
+        transform: translateX(-50vh);
+    }
+}
